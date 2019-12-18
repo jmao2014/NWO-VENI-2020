@@ -6,5 +6,5 @@ In order to use template on Overleaf, please set the compiler to lualatex.
 
 To compile the document run:
 ```
-lualatex veni2020.tex
+lualatex veni-template.tex
 ```
