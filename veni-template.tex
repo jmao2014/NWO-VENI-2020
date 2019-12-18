@@ -1,0 +1,494 @@
+% !TeX program = lualatex
+\documentclass[10pt]{article}
+
+
+% Set paper
+\usepackage[a4paper,top=0.98in, bottom=0.98in, left=0.98in, right=0.98in]{geometry}
+
+% The Calibri font is proprietary. The open source Carlito font is close enough.
+% The 10pt font is scaled by 0.95 to get the required 9.5pt.
+\usepackage{fontspec}
+\defaultfontfeatures{Scale=0.95}
+\linespread{1.09}
+\setmainfont{Carlito}
+
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+
+\usepackage{sectsty}
+\usepackage{enumitem,amssymb}
+\usepackage{pifont}
+\usepackage{tabularx,tabu}
+\usepackage{lipsum}
+%\usepackage{luacolor}
+
+% for hyper links
+\usepackage[colorlinks,citecolor=blue]{hyperref}
+% for euro symbol
+\usepackage{eurosym}
+% for text in color
+\usepackage{xcolor}
+
+% Colors extracted from NWO's Word template
+\definecolor{sectionblue}{RGB}{0, 139, 159}
+\definecolor{headerblue}{RGB}{65, 81, 102}
+\definecolor{tableblue}{RGB}{38, 97, 119}
+
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label={\color{sectionblue}$\square$}}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\done}{\rlap{\color{sectionblue}$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}\hspace{-2.5pt}}
+\newcommand{\tbd}{\color{sectionblue}$\square$}
+	
+% Correct style for section titles
+\sectionfont{\normalfont\color{sectionblue}\fontsize{18}{18}\selectfont}  % sets colour of sections
+\subsectionfont{\normalfont\color{sectionblue}\fontsize{13}{13}\selectfont}  % sets colour of subsections
+\subsubsectionfont{\normalfont\color{sectionblue}\fontsize{9.5}{9.5}\selectfont}  % sets colour of subsubsections
+
+% Font used in table headers
+\newcommand{\tableheadfont}{\bfseries\fontsize{10}{10}\selectfont\leavevmode\color{tableblue}}
+
+% Section numbering
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{\arabic{section}\alph{subsection}.}
+\renewcommand\thesubsubsection{\arabic{section}\alph{subsection}\arabic{subsubsection}.}
+
+%------AAS style of the reference -----------
+\newcommand{\aap}{Astronomy \& Astrophysics}
+\newcommand{\aaps}{Astronomy \& Astrophysics Supplement}
+\newcommand{\apj}{The Astrophysical Journal}
+\newcommand{\apjs}{The Astrophysical Journal Supplement Series}
+\newcommand{\araa}{Annual Review Astronomy \& Astrophysics}
+\newcommand{\nat}{Nature}
+\newcommand{\mnras}{Monthly Notice of the Royal Astronomical Society}
+\newcommand{\pasa}{Publications of the Astronomical Society of Australia}
+\newcommand{\pasj}{Publications of the Astronomical Society of Japan}
+\newcommand{\physscr}{Physica Scripta}
+
+
+% Automatic word count. Only works if texcount is installed and write18 is enabled
+% (call lualatex with --enable-write18).
+%\newcommand{\wordcount}[1]{\immediate\write18{texcount \jobname.tex  | grep "Subsection: #1" | sed -e 's/+.*//' > 'count.txt'}\input{count.txt}words}
+
+\begin{document}
+	
+	\noindent
+	\begin{minipage}{.85\linewidth}
+		\color{headerblue}
+		{\rmfamily\fontsize{20}{20}\selectfont Grant application proposal form 2020}\\[0.3cm]
+		{\rmfamily\fontsize{15}{15}\selectfont NWO Talent Programme -- Veni scheme}\\[0.25cm]
+		{\rmfamily\fontsize{11}{11}\selectfont
+		\\ %Applied and Engineering Sciences
+		\\ %Social Sciences and Humanities
+		\\ %Health Research and Development
+		\textbf{Science (ENW)}
+		}
+	\end{minipage}%
+	\begin{minipage}{.15\linewidth}
+		\includegraphics[height=3.5cm]{NWO_logo}
+	\end{minipage}
+	
+	\section{General information}
+	
+	\subsection{Title of the research proposal}
+	
+	\vfill 
+	
+	\subsection{Scientific summary of research proposal}
+	(Max. 300 words. \textbf{Identical to the abstract in ISAAC}) 
+	
+	\vfill
+	
+	Wordcount 1b: 
+	
+	\subsection{Keywords}
+	(Max. five words.) 
+	
+	\vfill
+	
+	\subsection{NWO domain}
+	\begin{todolist}
+		\setlength\itemsep{0em}
+		\item Applied and Engineering Sciences (AES/TTW)
+		\item Social Sciences and Humanities (SSH/SGW)
+		\item Health Research and Development (ZonMw)
+		\item[\done] Science (ENW)
+	\end{todolist}
+	
+	\subsection{Main field of research}
+	
+	
+	\begin{tabularx}{\linewidth}{|p{3.6cm}|X|}
+		\arrayrulecolor[gray]{0.8}\hline
+		\rowcolor[gray]{0.95}
+		& Code/Field or research: \\\hline
+		Main field of research: & \\\hline
+		Other field(s) of research (if applicable): & \\\hline
+	\end{tabularx}
+	
+	\subsection{Public summary of your research proposal}
+	Please supply both an English (ENG) and a Dutch (NL) version (max. fifty words each), including an English and Dutch popular title. Please see the Explanatory Notes below for the requested format and examples of public summaries. 
+	
+	{\hspace{2mm}\tableheadfont NL}\\
+	\hspace{2mm} \begin{tabularx}{\linewidth}{|X|}
+		\hline \textbf{Projecttitel} \\
+		\hline {\textit{Academische titel, Initialen, Achternaam, Instituut}} \\
+		\hline {Publiekssamenvatting} \\
+		\hline {Wordcount:} \\
+		\hline
+	\end{tabularx}
+	
+	\vspace{6mm}	
+	{\hspace{2mm}\tableheadfont ENG}\\
+	\hspace{2mm} \begin{tabularx}{\linewidth}{|X|}
+		\hline \textbf{Popular project title} \\
+		\hline {\textit{Academic title(s) Initials, Surname, Institute}} \\
+		\hline {Public summary} \\
+		\hline {Wordcount:} \\
+		\hline
+	\end{tabularx}	
+		
+	\section{Research proposal}
+	
+	\subsection{Description of the proposed research (weight 40\%)}
+	\vspace{-0.2cm}
+	(2a1, 2a2, and 2a3 combined total: max. 2,000 words on max. six pages)
+	
+	\subsubsection{Overall aim and key objective}
+	%\vfill
+	\subsubsection{Research plan}
+    %\vfill
+	\subsubsection{Motivation for choice of host institute}
+	
+	
+	Total wordcount 2a1, 2a2, and 2a3:  
+	
+	\subsection{Knowledge utilization (weight 20\%)}
+	\begin{todolist}
+		\setlength\itemsep{0em}
+		\item Yes, this proposal has the potential of knowledge utilization
+		\item No, this proposal has no direct knowledge utilization
+	\end{todolist}
+	
+	\textbf{If yes}, please describe the potential of knowledge utilization, including: 
+	\begin{itemize}
+	    \item[--] Contribution to society and/or other scientific areas;
+	    
+	    \item[--] Disciplines and organisations that might benefit from the results.
+ 	\end{itemize}
+
+    Additionally, describe the implementation, including:
+    \begin{itemize}
+	    \item[--] Action plan to allow the outcomes of the research project to benefit the potential knowledge users;
+	    
+	    \item[--] If and how the potential knowledge users will be involved;
+	    
+	    \item[--] (concrete) outcomes for society and/or other academic disciplines;
+	    
+	    \item[--] The period over which knowledge utilisation is expected to occur.
+ 	\end{itemize}
+    
+    \textbf{If no}, please motivate why your proposal has no direct knowledge utilization.
+
+    \vfill 
+    
+    
+    (2b: max. 750 words on max. 2 pages)
+    
+    Wordcount 2b:
+	
+	
+	\subsection{Literature references}
+	
+
+	
+	\subsection{Data management}
+	\begin{enumerate}
+	    \item Will data be collected or generated that are suitable for reuse? 
+	    \begin{todolist}
+		\setlength\itemsep{0em}
+		\item Yes: Then answer questions 2 to 4.
+		\item No: Then explain why the research will not result in reusable data or in data that cannot be stored or data that for other reasons are not relevant for reuse. 
+		\end{todolist}
+		
+		\item Where will the data be stored during the research? 
+		
+		\item After the project has been completed, how will the data be stored for the long-term and made available for the use by third parties? To whom will the data be accessible?
+		
+		\item Which facilities (ICT, (secure) archive, refrigerators or legal expertise) do you expect will be needed for the storage of data during the research and after the research? Are these available?
+	\end{enumerate}
+	
+	
+	\section{Budget}
+	
+	\subsection{Budget}
+	
+	The maximum amount of a Veni grant is € 250,000, to be spent over a period of three years. If the proposed research is of shorter duration, the maximum grant amount will be reduced accordingly.
+	
+	\vspace{0.4cm}
+	\noindent
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabularx}{\linewidth}{|p{2.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|X|X|X|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		{\rowcolor[gray]{0.95}} & \multicolumn{3}{c|}{\tableheadfont Description}  & {\tableheadfont Project Year 1} & {\tableheadfont Project Year 2}  & {\tableheadfont Project Year 3} & {\tableheadfont Total} \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Staff} & {\cellcolor[gray]{0.95} } & {\cellcolor[gray]{0.95}\tableheadfont FTE**} & {\cellcolor[gray]{0.95}\tableheadfont Total Months} & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont WP*} & \textit{Applicant} & &  & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont NWP*} & & &  & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Total Staff} & & &  & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Equipment} & \multicolumn{3}{l|}{..} & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Investments} & \multicolumn{3}{l|}{..} & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Consumables} & \multicolumn{3}{l|}{..} & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Travel} & \multicolumn{3}{l|}{..} & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Other} & \multicolumn{3}{l|}{..} & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Total Materials} & \multicolumn{3}{l|}{..} & & & & \\\hline
+		\multicolumn{4}{c|}{\cellcolor[gray]{0.95}\tableheadfont Grand total} & & & & \\\hline
+	\end{tabularx}
+	}
+	
+	Please note:
+	\begin{itemize}
+	    \item[--] Use one row each for each staff member, type of equipment, type of investment or type of material (e.g., data management costs). Additional rows (as many as you need) should be added underneath the bold print headings, listing all persons and items separately. You should not add headings.
+	    
+	    \item[--] Years are Project Years. For example: if your intended starting date is 1 October 2020, then Year 1 ranges from 1 October 2020 to 30 September 2021.
+	    
+	    \item[--] The Explanatory Notes mention which costs can be covered under the Veni scheme. Costs for infrastructure (accommodation and office automation, such as pc’s or laptops) are non-reimbursable.
+	    
+	    \item[--] Total FTE applicant (Veni + other tasks/projects) cannot exceed 1.0 FTE at any time during the project.
+	    
+		\item[*] WP = Scientific staff; NWP = Non-scientific staff; please also list the nature of the post (for example PhD student or postdoc researcher)
+		\item[**] Please list the time you will spend on your Veni, including any FTE percentage that your host institution will pay of your salary for your work on this Veni project. If your host institution pays for (part of) the time you spend on your Veni, please include this information in section 3b.
+	\end{itemize}
+
+	\subsection{Contributions `in kind'}
+
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabularx}{\linewidth}{|X|X|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		\rowcolor[gray]{0.95} {\tableheadfont Contributing party} & {\tableheadfont Description } & {\tableheadfont Estimated value in euros} \\\hline 
+	 & & \\\hline
+	 & & \\\hline
+	\end{tabularx}
+	}
+
+	\subsection{Contributions `in cash'}
+
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabularx}{\linewidth}{|X|X|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		\rowcolor[gray]{0.95} {\tableheadfont Contributing party} & {\tableheadfont Description } & {\tableheadfont Value in euros} \\\hline 
+		& & \\\hline
+		& & \\\hline
+	\end{tabularx}
+	}
+	
+	\subsection{Totals}
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabularx}{\linewidth}{|p{5cm}|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Grand total} & \ldots\quad (=3a) \\\hline 
+		{\cellcolor[gray]{0.95}\tableheadfont Requested budget} & \ldots\quad (=3a minus 3b and 3c) \\\hline 
+	\end{tabularx}
+	}
+
+	\subsection{Additional applications for this or an overlapping project}
+	Have you received additional grants for the project proposed for the Veni or a project with overlapping content either from NWO or from any other institution, and/or have you submitted the same idea or an idea with overlapping content elsewhere?
+	Please note:
+	\begin{todolist}
+		\setlength\itemsep{0em}
+	    \item No
+	    \item Yes (please provide details)
+	\end{todolist}
+    \vfill
+	
+
+	\section{Curriculum Vitae (weight 40\%)}
+	\subsection{Brief summary of your research over the last five years (Max. 250 words)}
+	\vfill
+	
+	\subsection{Academic staff supervised}
+	
+	\begin{tabularx}{\linewidth}{|>{\color{tableblue}}p{2.5cm}|p{4cm}|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		& \tableheadfont Give names or numbers & \tableheadfont Briefly clarify your exact role in the rightmost column. \\\hline
+		\rowcolor[gray]{0.95} \multicolumn{2}{|l|}{\tableheadfont PhDs} & \tableheadfont Promotor (formal supervisor),
+		Co-promotor (formal co-supervisor),
+		Role as (co-) supervisor \\\hline
+		Ongoing & & \\\hline
+		Successfully
+		completed & & \\\hline
+		Subtotal PhDs & & \\\hline
+		\rowcolor[gray]{0.95} \multicolumn{3}{|l|}{\tableheadfont Postdocs} \\\hline
+		 & & \\\hline 
+		Subtotal postdocs & & \\\hline
+		\rowcolor[gray]{0.95} \multicolumn{3}{|l|}{\tableheadfont Master students} \\\hline
+		& & \\\hline 
+		Subtotal master students & & \\\hline
+		\rowcolor[gray]{0.95} \multicolumn{3}{|l|}{\tableheadfont Other} \\\hline
+		Subtotal other & & \\\hline
+	\end{tabularx}	
+	
+	\subsection{International activities}
+	4c and 4d combined: maximum of two pages in total.
+	\vfill 
+	
+	\subsection{Other academic activities}
+	4c and 4d combined: maximum of two pages in total.
+	\vfill 
+	
+	\subsection{Grants, scholarships and prizes}
+	Please list the research scholarships/grants for which you have successfully applied and/or prizes that you have won and indicate the amount of money involved. In case of a consortium grant please specify the amount awarded to your own group or lab.
+	
+	\noindent
+	\begin{tabularx}{\linewidth}{|X|X|X|X|}
+		\hline
+		\tableheadfont Scholarship/Grant/Prize Formal applicant + url/website & \tableheadfont Amount in euros & \tableheadfont * &	\tableheadfont Year of award \\\hline
+		& & & \\\hline
+		& & & \\\hline
+		\color{tableblue} \underline{Subtotal} & & & \\\hline
+		\tableheadfont Scholarship/Grant/Prize Formal co-
+		applicant & & & \\\hline
+		& & & \\\hline
+		& & & \\\hline
+		\color{tableblue} \underline{Subtotal} & & & \\\hline
+		\tableheadfont Total & & & \\\hline		
+	\end{tabularx}
+	
+	\section{Output}
+	
+	\subsection{Output indicators}
+	
+	Please identify the most important output indicators in your field. Do not refer to your personal output indicators, only mention what is important in your field. 
+	
+	\subsection{Top publications (max. five)}
+	\vfill 
+	
+	\subsection{Output}
+	Use max. two pages for item 5c. 
+	\begin{itemize}[label={--}]
+		\color{tableblue}
+		\setlength\itemsep{0em}
+		\item Refereed articles
+		\item Non-refereed articles
+		\item Letters (to editors)
+		\item Books
+		\item Book chapters
+		\item Patents
+		\item Other
+	\end{itemize}
+
+	\section{Administrative details}
+	\subsection{Personal details}
+	
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabularx}{\linewidth}{|p{5cm}|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Title(s), initial(s), surname(s):} & \\\hline 
+		{\cellcolor[gray]{0.95}\tableheadfont Postal address (for full duration of the round):} & \\\hline 
+		{\cellcolor[gray]{0.95}\tableheadfont Telephone:} & \\\hline 
+		{\cellcolor[gray]{0.95}\tableheadfont Mobile phone:} & \\\hline 
+		{\cellcolor[gray]{0.95}\tableheadfont Email address:} & \\\hline 
+		{\cellcolor[gray]{0.95}\tableheadfont Preferred language of correspondence
+		(choose one):} & {\tbd}~Dutch~~~~~~~~~{\done}~English \\\hline 
+	\end{tabularx}
+	}
+	
+	\subsection{Master's degree (`doctoraal')}
+	
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabularx}{\linewidth}{|p{5cm}|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		{\cellcolor[gray]{0.95}\tableheadfont University/College of Higher Education:} & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Main subject:} & \\\hline
+	\end{tabularx}
+	}
+	
+	\subsection{Doctorate}
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabularx}{\linewidth}{|p{5cm}|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		{\cellcolor[gray]{0.95}\tableheadfont University/College of Higher Education:} & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Starting date (dd/mm/yy):} & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Date of PhD award (dd/mm/yy):} & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Supervisor(s) (‘Promotor(es)’):} & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Thesis title:} & \\\hline
+	\end{tabularx}
+	}
+	
+	\subsection{Current institution of employment}
+	\vfill
+	
+	\subsection{Prospective host institution} 
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabularx}{\linewidth}{|p{5cm}|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Host institution:} & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Research group:} & \\\hline
+	\end{tabularx}
+	}
+	
+	\subsection{Work experience since completing your PhD}
+	\noindent
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabularx}{\linewidth}{|X|X|p{1cm}|X|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		\rowcolor[gray]{0.95} {\tableheadfont Position} & {\tableheadfont Period (date-date)} & {\tableheadfont FTE } & {\tableheadfont Position type (fixed term/permanent/tenure-track/other)} & {\tableheadfont Institution} \\\hline 
+		& & & & \\\hline
+		& & & & \\\hline
+	\end{tabularx}
+	}
+	
+	\subsection{Months spent since completing your PhD (include a calculation)}
+	
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabularx}{\linewidth}{|p{5cm}|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		{\rowcolor[gray]{0.95}\tableheadfont Experience} & {\tableheadfont Number of months} \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Research activities} & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Teaching} & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Leave} & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Management tasks} & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Others (please specify):} & \\\hline
+	\end{tabularx}
+	}
+	
+	\section*{Statements by the applicant}
+	\subsection*{Use of extension clause}
+	\begin{todolist}
+		\setlength\itemsep{0em}
+		\item[\done] No
+		\item Yes
+	\end{todolist}
+	
+	\subsection*{Ethical aspects}
+	{\renewcommand{\arraystretch}{1.5}
+	\begin{tabularx}{\linewidth}{|p{5cm}|X|X|X|X|}
+		\arrayrulecolor[gray]{0.4}\hline
+		{\rowcolor[gray]{0.95}} & {\tableheadfont Not applicable} & {\tableheadfont Not yet applied for}  & {\tableheadfont Applied for} & {\tableheadfont Received} \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Approval from a medical ethics review committee} & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Approval from an animal experiments committee} & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Permission for research with the population screening Act} & & & & \\\hline
+		{\cellcolor[gray]{0.95}\tableheadfont Approval from any other recognised ethics review committee(s)} & & & & \\\hline
+	\end{tabularx}
+	}
+	
+	If your grant application is successful, all applicable ethical approval documents will need to be sent to NWO before the start of your Veni project.
+    
+ 	\subsection*{By submitting this form I declare that:}
+ 	\begin{todolist}
+		\setlength\itemsep{0em}
+		\item[\done] I have completed this form truthfully;
+		\item[\done] I satisfy the nationally and internationally accepted standards for scientific conduct as stated in the Netherlands Code of Conduct for Research Integrity 2018
+        \item I have submitted non-referees (no more than 3 in total). 
+        \item If applicable: I have included authorised 3$^{\rm rd}$ party letter(s), guaranteeing to meet part of the project costs.
+	\end{todolist}
+    
+    {\tableheadfont Name:}	 
+    \\
+    
+    {\tableheadfont Place:}	 
+    \\
+    
+    {\tableheadfont Date:}	 
+    \\
+    
+\end{document}
